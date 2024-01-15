@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var nam = prompt("mời nhập số năm");
+
+        // Kiểm tra điều kiện năm nhuận
+        if ((nam % 4 === 0 && nam % 100 !== 0) || nam % 400 === 0) {
+            console.log(nam + " là năm nhuận");
+        } else {
+            console.log(nam + " không là năm nhuận");
+        }
+    </script>
+</body>
+
+</html>

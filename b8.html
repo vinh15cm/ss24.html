@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var soThuNhat = prompt("mời nhập số thứ nhất");
+        var soThuHai = prompt("mời nhập số thứ hai");
+        var phepTinh = prompt("mời nhập phép tính");
+
+        // Kiểm tra nếu giá trị nhập vào là hợp lệ
+        if (!isNaN(soThuNhat) && !isNaN(soThuHai)) {
+            // Thực hiện phép tính
+            var ketQua;
+            switch (phepTinh) {
+                case '+':
+                    ketQua = soThuNhat + soThuHai;
+                    break;
+                case '-':
+                    ketQua = soThuNhat - soThuHai;
+                    break;
+                case '*':
+                    ketQua = soThuNhat * soThuHai;
+                    break;
+                case '/':
+                    if (soThuHai !== 0) {
+                        ketQua = soThuNhat / soThuHai;
+                    } else {
+                        console.log("Phép chia không hợp lệ (số thứ hai không được là 0).");
+                        return;
+                    }
+                    break;
+                default:
+                    console.log("Phép tính không hợp lệ.");
+                    return;
+            }
+
+            console.log(`Kết quả của ${soThuNhat} ${phepTinh} ${soThuHai} là ${ketQua}`);
+        } else {
+            console.log("Vui lòng nhập giá trị số hợp lệ.");
+        }
+
+
+    </script>
+</body>
+
+</html>
